@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ----------------------------------------- -->
+    <!--               GOOGLE FONTS                -->
+    <!-- ----------------------------------------- -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- ----------------------------------------- -->
+    <!--                  STYLES                   -->
+    <!-- ----------------------------------------- -->
+
+    <link rel="stylesheet" href="/dist/css/style.min.css" />
+
+    <title>Formulario Dinámico</title>
+  </head>
+
+  <body>
+    <!-- ----------------------------------------- -->
+    <!--                 MAIN FORM                 -->
+    <!-- ----------------------------------------- -->
+
+    <div class="success__Box"></div>
+    <div class="success__Message">¡Gracias por Participar de la Encuesta!</div>
+
+    <form id="form" class="form" class="js-form" action="">
+      <div class="socorroRosa">
+        <h1 class="socorroRosa__titulo">Socorristas en Red - Socorro Rosa</h1>
+
+        <label class="socorroRosa__label" for="name">¿Que nombre identifica a la Grupa?</label>
+        <input class="socorroRosa__input" type="text" name="name" id="name" placeholder="Ingresa el nombre de la Grupa" required />
+
+        <label class="socorroRosa__label" for="province">Provincia</label>
+
+        <select name="province" class="socorroRosa__provincia js-province-list" id="province" required>
+          <option disabled selected value="">Elija una Provincia</option>
+          <option value="02">Ciudad Autónoma de Buenos Aires</option>
+          <option value="06">Buenos Aires</option>
+          <option value="10">Catamarca</option>
+          <option value="22">Chaco</option>
+          <option value="26">Chubut</option>
+          <option value="14">Córdoba</option>
+          <option value="18">Corrientes</option>
+          <option value="30">Entre Ríos</option>
+          <option value="34">Formosa</option>
+          <option value="38">Jujuy</option>
+          <option value="42">La Pampa</option>
+          <option value="46">La Rioja</option>
+          <option value="50">Mendoza</option>
+          <option value="54">Misiones</option>
+          <option value="58">Neuquén</option>
+          <option value="62">Río Negro</option>
+          <option value="66">Salta</option>
+          <option value="70">San Juan</option>
+          <option value="74">San Luis</option>
+          <option value="78">Santa Cruz</option>
+          <option value="82">Santa Fe</option>
+          <option value="86">Santiago del Estero</option>
+          <option value="90">Tucumán</option>
+          <option value="94">Tierra del Fuego, Antártida e Islas del Atlántico Sur</option>
+        </select>
+      </div>
+
+      <div class="fechaGrupa" id="fechaGrupa">
+        <h2>¿En qué año empieza a operar la grupa?</h2>
+        <label for="2012">2012</label>
+        <input value="2012" class="js-year" type="checkbox" name="grupa" id="2012" />
+
+        <label for="2013">2013</label>
+        <input value="2013" class="js-year" type="checkbox" name="grupa" id="2013" />
+
+        <label for="2014">2014</label>
+        <input value="2014" class="js-year" type="checkbox" name="grupa" id="2014" />
+
+        <label for="2015">2015</label>
+        <input value="2015" class="js-year" type="checkbox" name="grupa" id="2015" />
+
+        <label for="2016">2016</label>
+        <input value="2016" class="js-year" type="checkbox" name="grupa" id="2016" />
+
+        <label for="2017">2017</label>
+        <input value="2017" class="js-year" type="checkbox" name="grupa" id="2017" />
+
+        <label for="2018">2018</label>
+        <input value="2018" class="js-year" type="checkbox" name="grupa" id="2018" />
+
+        <label for="2019">2019</label>
+        <input value="2019" class="js-year" type="checkbox" name="grupa" id="2019" />
+
+        <label for="2020">2020</label>
+        <input value="2020" class="js-year" type="checkbox" name="grupa" id="2020" />
+      </div>
+
+      <!-- ----------------------------------------- -->
+      <!--                   2012                    -->
+      <!-- ----------------------------------------- -->
+      <div class="subForm__2012 js-sub-form">
+        <h3 class="subForm__titulo">Año 2012</h3>
+
+        <div class="subForm__integrantes">
+          <label for="integrantesGrupa">¿Cuantas personas integraban la grupa en el año 2012? </label>
+          <input class="subForm__numerico" type="number" name="integrantesGrupa" value="0" />
+        </div>
+
+        <div class="subForm__mudanza">
+          <label for="mudanzaGrupa">¿Alguna de esas personas se mudo al terminar el año 2012?</label>
+
+          <select class="subForm__input" name="mudanzaGrupa" id="mudanzaGrupa-2012">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="cuantasMudanza">
+            <label for="cuantasMudanza">¿Cuantas? </label>
+
+            <input class="subForm__numerico" type="number" name="cuantasMudanza" id="cuantasMudanza" value="0" />
+          </div>
+        </div>
+
+        <div class="subForm__participa">
+          <label for="participaGrupa">¿Siguen participando de Socorro Rosa después de 2012?</label>
+
+          <select class="subForm__input" name="sigue_participando" id="participaGrupa-2012">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="dondeGrupa">
+            <label for="dondeGrupa">Donde?</label>
+            <select class="subForm__input js-municpios-list" name="dondeGrupa" id="dondeGrupa"></select>
+          </div>
+        </div>
+
+        <div class="subForm__base">
+          <label for="baseGrupa">¿Qué localidad tiene por base la grupa en 2012?</label>
+          <select class="subForm__input js-municpios-list" name="baseGrupa"></select>
+        </div>
+
+        <div class="subForm__actua">
+          <label for="actuoGrupa">¿En qué otras localidades actuó la grupa en 2012?</label>
+          <select class="selectActuo subForm__input js-municpios-list" name="actuoGrupa" multiple size="10" multiple size="10"></select>
+          <p class="control">
+            Mantenga presionado
+            <kbd>Ctrl</kbd>
+            para seleccionar seleccionar multiples Opciones
+          </p>
+        </div>
+      </div>
+
+      <!-- ------------------ --- ------------------ -->
+
+      <!-- ----------------------------------------- -->
+      <!--                   2013                    -->
+      <!-- ----------------------------------------- -->
+      <div class="subForm__2013 js-sub-form">
+        <h3 class="subForm__titulo">Año 2013</h3>
+
+        <div class="subForm__integrantes">
+          <label for="integrantesGrupa">¿Cuantas personas integraban la grupa en el año 2013? </label>
+          <input class="subForm__numerico" type="number" name="integrantesGrupa" value="0" />
+        </div>
+
+        <div class="subForm__mudanza">
+          <label for="mudanzaGrupa">¿Alguna de esas personas se mudo al terminar el año 2013?</label>
+
+          <select class="subForm__input" name="mudanzaGrupa" id="mudanzaGrupa-2013">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="cuantasMudanza">
+            <label for="cuantasMudanza">¿Cuantas? </label>
+
+            <input class="subForm__numerico" type="number" name="cuantasMudanza" id="cuantasMudanza" value="0" />
+          </div>
+        </div>
+
+        <div class="subForm__participa">
+          <label for="participaGrupa">¿Siguen participando de Socorro Rosa después de 2013?</label>
+
+          <select class="subForm__input" name="sigue_participando" id="participaGrupa-2013">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="dondeGrupa">
+            <label for="dondeGrupa">Donde?</label>
+            <select class="subForm__input js-municpios-list" name="dondeGrupa" id="dondeGrupa"></select>
+          </div>
+        </div>
+
+        <div class="subForm__base">
+          <label for="baseGrupa">¿Qué localidad tiene por base la grupa en 2013?</label>
+          <select class="subForm__input js-municpios-list" name="baseGrupa"></select>
+        </div>
+
+        <div class="subForm__actua">
+          <label for="actuoGrupa">¿En qué otras localidades actuó la grupa en 2013?</label>
+          <select class="subForm__input js-municpios-list" name="actuoGrupa" multiple size="10"></select>
+          <p class="control">
+            Mantenga presionado
+            <kbd>Ctrl</kbd>
+            para seleccionar seleccionar multiples Opciones
+          </p>
+        </div>
+      </div>
+
+      <!-- ------------------ --- ------------------ -->
+
+      <!-- ----------------------------------------- -->
+      <!--                   2014                    -->
+      <!-- ----------------------------------------- -->
+      <div class="subForm__2014 js-sub-form">
+        <h3 class="subForm__titulo">Año 2014</h3>
+
+        <div class="subForm__integrantes">
+          <label for="integrantesGrupa">¿Cuantas personas integraban la grupa en el año 2014? </label>
+          <input class="subForm__numerico" type="number" name="integrantesGrupa" value="0" />
+        </div>
+
+        <div class="subForm__mudanza">
+          <label for="mudanzaGrupa">¿Alguna de esas personas se mudo al terminar el año 2014?</label>
+
+          <select class="subForm__input" name="mudanzaGrupa" id="mudanzaGrupa-2014">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="cuantasMudanza">
+            <label for="cuantasMudanza">¿Cuantas? </label>
+
+            <input class="subForm__numerico" type="number" name="cuantasMudanza" id="cuantasMudanza" value="0" />
+          </div>
+        </div>
+
+        <div class="subForm__participa">
+          <label for="participaGrupa">¿Siguen participando de Socorro Rosa después de 2014?</label>
+
+          <select class="subForm__input" name="sigue_participando" id="participaGrupa-2014">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="dondeGrupa">
+            <label for="dondeGrupa">Donde?</label>
+            <select class="subForm__input js-municpios-list" name="dondeGrupa" id="dondeGrupa"></select>
+          </div>
+        </div>
+
+        <div class="subForm__base">
+          <label for="baseGrupa">¿Qué localidad tiene por base la grupa en 2014?</label>
+          <select class="subForm__input js-municpios-list" name="baseGrupa"></select>
+        </div>
+
+        <div class="subForm__actua">
+          <label for="actuoGrupa">¿En qué otras localidades actuó la grupa en 2014?</label>
+          <select class="subForm__input js-municpios-list" name="actuoGrupa" multiple size="10"></select>
+          <p class="control">
+            Mantenga presionado
+            <kbd>Ctrl</kbd>
+            para seleccionar seleccionar multiples Opciones
+          </p>
+        </div>
+      </div>
+
+      <!-- ------------------ --- ------------------ -->
+
+      <!-- ----------------------------------------- -->
+      <!--                   2015                    -->
+      <!-- ----------------------------------------- -->
+      <div class="subForm__2015 js-sub-form">
+        <h3 class="subForm__titulo">Año 2015</h3>
+
+        <div class="subForm__integrantes">
+          <label for="integrantesGrupa">¿Cuantas personas integraban la grupa en el año 2015? </label>
+          <input class="subForm__numerico" type="number" name="integrantesGrupa" value="0" />
+        </div>
+
+        <div class="subForm__mudanza">
+          <label for="mudanzaGrupa">¿Alguna de esas personas se mudo al terminar el año 2015?</label>
+
+          <select class="subForm__input" name="mudanzaGrupa" id="mudanzaGrupa-2015">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="cuantasMudanza">
+            <label for="cuantasMudanza">¿Cuantas? </label>
+
+            <input class="subForm__numerico" type="number" name="cuantasMudanza" id="cuantasMudanza" value="0" />
+          </div>
+        </div>
+
+        <div class="subForm__participa">
+          <label for="participaGrupa">¿Siguen participando de Socorro Rosa después de 2015?</label>
+
+          <select class="subForm__input" name="sigue_participando" id="participaGrupa-2015">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="dondeGrupa">
+            <label for="dondeGrupa">Donde?</label>
+            <select class="subForm__input js-municpios-list" name="dondeGrupa" id="dondeGrupa"></select>
+          </div>
+        </div>
+
+        <div class="subForm__base">
+          <label for="baseGrupa">¿Qué localidad tiene por base la grupa en 2015?</label>
+          <select class="subForm__input js-municpios-list" name="baseGrupa"></select>
+        </div>
+
+        <div class="subForm__actua">
+          <label for="actuoGrupa">¿En qué otras localidades actuó la grupa en 2015?</label>
+          <select class="subForm__input js-municpios-list" name="actuoGrupa" multiple size="10"></select>
+          <p class="control">
+            Mantenga presionado
+            <kbd>Ctrl</kbd>
+            para seleccionar seleccionar multiples Opciones
+          </p>
+        </div>
+      </div>
+
+      <!-- ------------------ --- ------------------ -->
+
+      <!-- ----------------------------------------- -->
+      <!--                   2016                    -->
+      <!-- ----------------------------------------- -->
+      <div class="subForm__2016 js-sub-form">
+        <h3 class="subForm__titulo">Año 2016</h3>
+
+        <div class="subForm__integrantes">
+          <label for="integrantesGrupa">¿Cuantas personas integraban la grupa en el año 2016? </label>
+          <input class="subForm__numerico" type="number" name="integrantesGrupa" value="0" />
+        </div>
+
+        <div class="subForm__mudanza">
+          <label for="mudanzaGrupa">¿Alguna de esas personas se mudo al terminar el año 2016?</label>
+
+          <select class="subForm__input" name="mudanzaGrupa" id="mudanzaGrupa-2016">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="cuantasMudanza">
+            <label for="cuantasMudanza">¿Cuantas? </label>
+
+            <input class="subForm__numerico" type="number" name="cuantasMudanza" id="cuantasMudanza" value="0" />
+          </div>
+        </div>
+
+        <div class="subForm__participa">
+          <label for="participaGrupa">¿Siguen participando de Socorro Rosa después de 2016?</label>
+
+          <select class="subForm__input" name="sigue_participando" id="participaGrupa-2016">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="dondeGrupa">
+            <label for="dondeGrupa">Donde?</label>
+            <select class="subForm__input js-municpios-list" name="dondeGrupa" id="dondeGrupa"></select>
+          </div>
+        </div>
+
+        <div class="subForm__base">
+          <label for="baseGrupa">¿Qué localidad tiene por base la grupa en 2016?</label>
+          <select class="subForm__input js-municpios-list" name="baseGrupa"></select>
+        </div>
+
+        <div class="subForm__actua">
+          <label for="actuoGrupa">¿En qué otras localidades actuó la grupa en 2016?</label>
+          <select class="subForm__input js-municpios-list" name="actuoGrupa" multiple size="10"></select>
+          <p class="control">
+            Mantenga presionado
+            <kbd>Ctrl</kbd>
+            para seleccionar seleccionar multiples Opciones
+          </p>
+        </div>
+      </div>
+
+      <!-- ------------------ --- ------------------ -->
+
+      <!-- ----------------------------------------- -->
+      <!--                   2017                    -->
+      <!-- ----------------------------------------- -->
+      <div class="subForm__2017 js-sub-form">
+        <h3 class="subForm__titulo">Año 2017</h3>
+
+        <div class="subForm__integrantes">
+          <label for="integrantesGrupa">¿Cuantas personas integraban la grupa en el año 2017? </label>
+          <input class="subForm__numerico" type="number" name="integrantesGrupa" value="0" />
+        </div>
+
+        <div class="subForm__mudanza">
+          <label for="mudanzaGrupa">¿Alguna de esas personas se mudo al terminar el año 2017?</label>
+
+          <select class="subForm__input" name="mudanzaGrupa" id="mudanzaGrupa-2017">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="cuantasMudanza">
+            <label for="cuantasMudanza">¿Cuantas? </label>
+
+            <input class="subForm__numerico" type="number" name="cuantasMudanza" id="cuantasMudanza" value="0" />
+          </div>
+        </div>
+
+        <div class="subForm__participa">
+          <label for="participaGrupa">¿Siguen participando de Socorro Rosa después de 2017?</label>
+
+          <select class="subForm__input" name="sigue_participando" id="participaGrupa-2017">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="dondeGrupa">
+            <label for="dondeGrupa">Donde?</label>
+            <select class="subForm__input js-municpios-list" name="dondeGrupa" id="dondeGrupa"></select>
+          </div>
+        </div>
+
+        <div class="subForm__base">
+          <label for="baseGrupa">¿Qué localidad tiene por base la grupa en 2017?</label>
+          <select class="subForm__input js-municpios-list" name="baseGrupa"></select>
+        </div>
+
+        <div class="subForm__actua">
+          <label for="actuoGrupa">¿En qué otras localidades actuó la grupa en 2017?</label>
+          <select class="subForm__input js-municpios-list" name="actuoGrupa" multiple size="10"></select>
+          <p class="control">
+            Mantenga presionado
+            <kbd>Ctrl</kbd>
+            para seleccionar seleccionar multiples Opciones
+          </p>
+        </div>
+      </div>
+
+      <!-- ------------------ --- ------------------ -->
+
+      <!-- ----------------------------------------- -->
+      <!--                   2018                    -->
+      <!-- ----------------------------------------- -->
+      <div class="subForm__2018 js-sub-form">
+        <h3 class="subForm__titulo">Año 2018</h3>
+
+        <div class="subForm__integrantes">
+          <label for="integrantesGrupa">¿Cuantas personas integraban la grupa en el año 2018? </label>
+          <input class="subForm__numerico" type="number" name="integrantesGrupa" value="0" />
+        </div>
+
+        <div class="subForm__mudanza">
+          <label for="mudanzaGrupa">¿Alguna de esas personas se mudo al terminar el año 2018?</label>
+
+          <select class="subForm__input" name="mudanzaGrupa" id="mudanzaGrupa-2018">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="cuantasMudanza">
+            <label for="cuantasMudanza">¿Cuantas? </label>
+
+            <input class="subForm__numerico" type="number" name="cuantasMudanza" id="cuantasMudanza" value="0" />
+          </div>
+        </div>
+
+        <div class="subForm__participa">
+          <label for="participaGrupa">¿Siguen participando de Socorro Rosa después de 2018?</label>
+
+          <select class="subForm__input" name="sigue_participando" id="participaGrupa-2018">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="dondeGrupa">
+            <label for="dondeGrupa">Donde?</label>
+            <select class="subForm__input js-municpios-list" name="dondeGrupa" id="dondeGrupa"></select>
+          </div>
+        </div>
+
+        <div class="subForm__base">
+          <label for="baseGrupa">¿Qué localidad tiene por base la grupa en 2018?</label>
+          <select class="subForm__input js-municpios-list" name="baseGrupa"></select>
+        </div>
+
+        <div class="subForm__actua">
+          <label for="actuoGrupa">¿En qué otras localidades actuó la grupa en 2018?</label>
+          <select class="subForm__input js-municpios-list" name="actuoGrupa" multiple size="10"></select>
+          <p class="control">
+            Mantenga presionado
+            <kbd>Ctrl</kbd>
+            para seleccionar seleccionar multiples Opciones
+          </p>
+        </div>
+      </div>
+
+      <!-- ------------------ --- ------------------ -->
+
+      <!-- ----------------------------------------- -->
+      <!--                   2019                    -->
+      <!-- ----------------------------------------- -->
+      <div class="subForm__2019 js-sub-form">
+        <h3 class="subForm__titulo">Año 2019</h3>
+
+        <div class="subForm__integrantes">
+          <label for="integrantesGrupa">¿Cuantas personas integraban la grupa en el año 2019? </label>
+          <input class="subForm__numerico" type="number" name="integrantesGrupa" value="0" />
+        </div>
+
+        <div class="subForm__mudanza">
+          <label for="mudanzaGrupa">¿Alguna de esas personas se mudo al terminar el año 2019?</label>
+
+          <select class="subForm__input" name="mudanzaGrupa" id="mudanzaGrupa-2019">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="cuantasMudanza">
+            <label for="cuantasMudanza">¿Cuantas? </label>
+
+            <input class="subForm__numerico" type="number" name="cuantasMudanza" id="cuantasMudanza" value="0" />
+          </div>
+        </div>
+
+        <div class="subForm__participa">
+          <label for="participaGrupa">¿Siguen participando de Socorro Rosa después de 2019?</label>
+
+          <select class="subForm__input" name="sigue_participando" id="participaGrupa-2019">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="dondeGrupa">
+            <label for="dondeGrupa">Donde?</label>
+            <select class="subForm__input js-municpios-list" name="dondeGrupa" id="dondeGrupa"></select>
+          </div>
+        </div>
+
+        <div class="subForm__base">
+          <label for="baseGrupa">¿Qué localidad tiene por base la grupa en 2019?</label>
+          <select class="subForm__input js-municpios-list" name="baseGrupa"></select>
+        </div>
+
+        <div class="subForm__actua">
+          <label for="actuoGrupa">¿En qué otras localidades actuó la grupa en 2019?</label>
+          <select class="subForm__input js-municpios-list" name="actuoGrupa" multiple size="10"></select>
+          <p class="control">
+            Mantenga presionado
+            <kbd>Ctrl</kbd>
+            para seleccionar seleccionar multiples Opciones
+          </p>
+        </div>
+      </div>
+
+      <!-- ------------------ --- ------------------ -->
+      <!-- ----------------------------------------- -->
+      <!--                   2020                    -->
+      <!-- ----------------------------------------- -->
+      <div class="subForm__2020 js-sub-form">
+        <h3 class="subForm__titulo">Año 2020</h3>
+
+        <div class="subForm__integrantes">
+          <label for="integrantesGrupa">¿Cuantas personas integraban la grupa en el año 2020? </label>
+          <input class="subForm__numerico" type="number" name="integrantesGrupa" value="0" />
+        </div>
+
+        <div class="subForm__mudanza">
+          <label for="mudanzaGrupa">¿Alguna de esas personas se mudo al terminar el año 2020?</label>
+
+          <select class="subForm__input" name="mudanzaGrupa" id="mudanzaGrupa-2020">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="cuantasMudanza">
+            <label for="cuantasMudanza">¿Cuantas? </label>
+
+            <input class="subForm__numerico" type="number" name="cuantasMudanza" id="cuantasMudanza" value="0" />
+          </div>
+        </div>
+
+        <div class="subForm__participa">
+          <label for="participaGrupa">¿Siguen participando de Socorro Rosa después de 2020?</label>
+
+          <select class="subForm__input" name="sigue_participando" id="participaGrupa-2020">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+
+          <div class="dondeGrupa">
+            <label for="dondeGrupa">Donde?</label>
+            <select class="subForm__input js-municpios-list" name="dondeGrupa" id="dondeGrupa"></select>
+          </div>
+        </div>
+
+        <div class="subForm__base">
+          <label for="baseGrupa">¿Qué localidad tiene por base la grupa en 2020?</label>
+          <select class="subForm__input js-municpios-list" name="baseGrupa"></select>
+        </div>
+
+        <div class="subForm__actua">
+          <label for="actuoGrupa">¿En qué otras localidades actuó la grupa en 2020?</label>
+          <select class="subForm__input js-municpios-list" name="actuoGrupa" multiple size="10"></select>
+          <p class="control">
+            Mantenga presionado
+            <kbd>Ctrl</kbd>
+            para seleccionar seleccionar multiples Opciones
+          </p>
+        </div>
+      </div>
+
+      <!-- ------------------ --- ------------------ -->
+
+      <button type="submit" class="js-submit">Enviar</button>
+    </form>
+
+    <script src="/dist/js/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="/dist/js/scripts.js"></script>
+  </body>
+</html>
